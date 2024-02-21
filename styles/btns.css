@@ -1,0 +1,61 @@
+*{
+    color: #f2f4f3 !important;
+}
+
+.btn{
+    padding: 10px 20px;
+    text-decoration: none;
+    position: relative;
+    border: 2px solid rgba(242, 244, 243, 0.75);
+    border-radius: 8px;
+    color: #f2f4f3;
+    cursor: pointer;
+    transition: all 250ms linear;
+    outline: none;
+    text-align: center;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover, .btn:focus{
+    border-color: rgba(255, 206, 71, 0.25);
+    box-shadow: 0 0 1rem rgba(255, 206, 71, 0.25);
+    background: conic-gradient(from 95.27deg at 51.3% 51.96%, #44330d -0.95deg, #121110 62.41deg, #0c131c 134.15deg, #2e2304 181.84deg, #1a150d 237.07deg, #121110 317.05deg, #44330d 359.05deg, #121110 422.41deg);
+    text-shadow:
+    0 0 10px goldenrod,
+    0 0 20px goldenrod;
+}
+
+.btn:hover::before,
+.btn:hover::after,
+.btn:focus::before,
+.btn:focus::after {
+    width: calc(100% - 8px);
+    transition-duration: 0.75s;
+}
+
+.btn::after {
+    right: 0;
+    bottom: 0;
+    margin-bottom: -2px;
+    margin-right: 4px;
+    background: linear-gradient(270deg, rgba(242, 244, 243, 0) 0%, rgba(255, 181, 71, 0.75) 10%, rgba(242, 244, 243, 0) 50%);
+}
+
+.btn::before{
+    left: 0;
+    top: 0;
+    margin-top: -2px;
+    margin-left: 4px;
+    background: linear-gradient(90deg, rgba(242, 244, 243, 0) 0%, rgba(255, 181, 71, 0.75) 10%, rgba(242, 244, 243, 0) 50%);
+}
+
+.btn::before, .btn::after{
+        content: "";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        transition: all 250ms ease-in;
+}
